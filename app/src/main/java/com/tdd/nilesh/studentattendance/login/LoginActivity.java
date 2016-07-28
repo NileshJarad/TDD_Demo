@@ -1,7 +1,9 @@
-package com.tdd.nilesh.studentattendance;
+package com.tdd.nilesh.studentattendance.login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.tdd.nilesh.studentattendance.R;
 
 public class LoginActivity extends AppCompatActivity {
 
