@@ -17,4 +17,18 @@ public class LoginPresenterTest {
         Assert.assertTrue(loginPresenter.isLoginAttemptExceeded());
     }
 
+
+    @Test
+    public void checkIfLoginAttemptIsNotExceeded() {
+        LoginPresenter loginPresenter = new LoginPresenter();
+        Assert.assertFalse(loginPresenter.isLoginAttemptExceeded());
+    }
+
+
+    @Test
+    public void checkUsernameAndPasswordIsCorrect()
+    {
+        LoginPresenter loginPresenter = new LoginPresenter();
+        Assert.assertTrue(loginPresenter.isLoginSuccess("nilesh","tdd"));
+    }
 }

@@ -18,6 +18,15 @@ public class LoginPresenter {
     public boolean isLoginAttemptExceeded() {
         return loginAttempt >= MAX_LOGIN_ATTEMPT;
     }
+
+
+    public boolean isLoginSuccess(String userName, String password) {
+        if(userName.equals("nilesh") && password.equals("tdd"))
+        {
+            return true;
+        }
+        return false;
+    }
 }
 
 
