@@ -21,13 +21,20 @@ public class LoginPresenter {
 
 
     public boolean isLoginSuccess(String userName, String password) {
-        if(userName.equals("nilesh") && password.equals("tdd"))
-        {
+        if (isLoginAttemptExceeded()) {
+            return false;
+        }
+
+        if (userName.equals("nilesh") && password.equals("tdd")) {
             return true;
         }
+        // increment login attempt if it's fail
+        incrementLoginAttempt();
         return false;
     }
 }
+
+
 
 
 
