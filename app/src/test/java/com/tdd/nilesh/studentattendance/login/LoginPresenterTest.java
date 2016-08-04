@@ -31,4 +31,11 @@ public class LoginPresenterTest {
         LoginPresenter loginPresenter = new LoginPresenter();
         Assert.assertTrue(loginPresenter.isLoginSuccess("nilesh","tdd"));
     }
+
+    @Test
+    public void checkUsernameAndPasswordIsInCorrect()
+    {
+        LoginPresenter loginPresenter = new LoginPresenter();
+        Assert.assertTrue(loginPresenter.isLoginSuccess("nilesh","klj"));
+    }
 }
