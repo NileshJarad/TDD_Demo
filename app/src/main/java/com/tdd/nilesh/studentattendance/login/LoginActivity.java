@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         initializeViews();
     }
 
+
     private void initializePresenter() {
         loginPresenter = new LoginPresenter(this);
     }
@@ -35,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginPresenter.isLoginSuccess(edtUserName.getText().toString().trim(),
+                loginPresenter.doLogin(edtUserName.getText().toString().trim(),
                         edtPassword.getText().toString().trim());
             }
         });
@@ -52,8 +53,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     @Override
-    public void startAttendanceScreen() {
-
+    public void showLoginSuccessMessage() {
+        Snackbar.make(btnLogin, "Login successful.", Snackbar.LENGTH_LONG).show();
     }
 }
 

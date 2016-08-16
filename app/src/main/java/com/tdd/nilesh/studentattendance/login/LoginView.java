@@ -8,5 +8,5 @@ public interface LoginView {
 
     void showErrorMessageForMaxLoginAttempt();
 
-    void startAttendanceScreen();
+    void showLoginSuccessMessage();
 }

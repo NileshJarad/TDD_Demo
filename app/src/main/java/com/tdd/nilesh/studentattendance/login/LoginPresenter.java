@@ -24,21 +24,20 @@ public class LoginPresenter {
     }
 
 
-    public boolean isLoginSuccess(String userName, String password) {
+    public void doLogin(String userName, String password) {
         if (isLoginAttemptExceeded()) {
             loginView.showErrorMessageForMaxLoginAttempt();
-            return false;
+            return;
         }
 
         if (userName.equals("nilesh") && password.equals("tdd")) {
-            loginView.startAttendanceScreen();
-            return true;
+            loginView.showLoginSuccessMessage();
+            return;
         }
 
         // increment login attempt only if it's fail
         incrementLoginAttempt();
         loginView.showErrorMessageForUserNamePassword();
-        return false;
     }
 }
 
