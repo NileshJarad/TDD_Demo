@@ -1,7 +1,8 @@
 TDD in Android tutorial series code
 =============
 #Update
-Current  Repo. code contains Unit testing & integration testing. For detailed explanation on code please visit links below for repective tutorial.
+Current  Repository code contains Unit testing & integration testing code. 
+For detailed explanation on code please visit links below for respective tutorial.
 
 
 ## Blog posts
@@ -22,3 +23,10 @@ Current  Repo. code contains Unit testing & integration testing. For detailed ex
 
 * Project architecture(MVP)
 * Writing Unit Tests
+
+[4. How to do TDD in Android ? Part 3 — Mocking & Integration testing.](https://medium.com/mobility/how-to-do-tdd-in-android-part-3-mocking-integration-testing-60b057840db6#.bhfjkgxvz)
+
+* What is mocking ?
+* mock & verify method use in mocking
+* Integration testing (Between Presenter & View)
+
