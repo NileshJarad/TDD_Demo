@@ -19,6 +19,10 @@ public class LoginPresenter {
         return loginAttempt;
     }
 
+    public void resetLoginAttempt() {
+        loginAttempt = 0;
+    }
+
     public boolean isLoginAttemptExceeded() {
         return loginAttempt >= MAX_LOGIN_ATTEMPT;
     }
@@ -32,6 +36,7 @@ public class LoginPresenter {
 
         if (userName.equals("nilesh") && password.equals("tdd")) {
             loginView.showLoginSuccessMessage();
+            resetLoginAttempt();
             return;
         }
 
