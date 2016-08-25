@@ -36,7 +36,7 @@ public class LoginPresenterTest {
     {
         LoginView loginView= mock(LoginView.class);
         LoginPresenter loginPresenter = new LoginPresenter(loginView);
-        loginPresenter.doLogin("nilesh","tdd");
+        loginPresenter.doLogin("nj","tdd");
         verify(loginView).showLoginSuccessMessage();
     }
 

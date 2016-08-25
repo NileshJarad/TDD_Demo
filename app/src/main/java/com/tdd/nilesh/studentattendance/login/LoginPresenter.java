@@ -34,7 +34,7 @@ public class LoginPresenter {
             return;
         }
 
-        if (userName.equals("nilesh") && password.equals("tdd")) {
+        if (userName.equals("nj") && password.equals("tdd")) {
             loginView.showLoginSuccessMessage();
             resetLoginAttempt();
             return;
