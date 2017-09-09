@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     private void initializePresenter() {
         loginPresenter = new LoginPresenter(this);
+
     }
 
     private void initializeViews() {

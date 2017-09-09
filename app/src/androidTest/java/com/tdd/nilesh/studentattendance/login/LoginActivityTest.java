@@ -34,6 +34,7 @@ public class LoginActivityTest {
     public void checkUserNameEditTextIsDisplayed() {
         activityTestRule.launchActivity(new Intent());
         onView(withId(R.id.edt_user_name)).check(matches(isDisplayed()));
+
     }
 
     @Test
