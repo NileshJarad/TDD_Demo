@@ -10,6 +10,7 @@ import static org.mockito.Mockito.verify;
 /**
  * Created by nileshjarad on 02/08/16.
  */
+// Follow this tutorial https://medium.com/mobility/how-to-do-tdd-in-android-90f013d91d7f
 public class LoginPresenterTest {
 
     @Test
@@ -18,7 +19,7 @@ public class LoginPresenterTest {
         LoginPresenter loginPresenter = new LoginPresenter(loginView);
         Assert.assertEquals(1, loginPresenter.incrementLoginAttempt());
         Assert.assertEquals(2, loginPresenter.incrementLoginAttempt());
-        Assert.assertEquals(3, loginPresenter.incrementLoginAttempt());
+        Assert.assertEquals(4, loginPresenter.incrementLoginAttempt());
         Assert.assertTrue(loginPresenter.isLoginAttemptExceeded());
     }
 

@@ -22,6 +22,9 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 /**
  * Created by NJ on 24/08/16.
  */
+
+// just normal space
+//Follow this tutorial https://medium.com/mobility/how-to-do-tdd-in-android-90f013d91d7f
 @RunWith(AndroidJUnit4.class)
 public class LoginActivityTest {
     ActivityTestRule<LoginActivity> activityTestRule =
@@ -31,6 +34,7 @@ public class LoginActivityTest {
     public void checkUserNameEditTextIsDisplayed() {
         activityTestRule.launchActivity(new Intent());
         onView(withId(R.id.edt_user_name)).check(matches(isDisplayed()));
+
     }
 
     @Test
