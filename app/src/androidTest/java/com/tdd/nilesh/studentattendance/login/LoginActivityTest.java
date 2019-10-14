@@ -2,11 +2,15 @@ package com.tdd.nilesh.studentattendance.login;
 
 
 import android.content.Intent;
-import androidx.test.rule.ActivityTestRule;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
 
 import com.tdd.nilesh.studentattendance.R;
 
+
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -23,9 +27,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
  * Created by NJ on 24/08/16.
  */
 @RunWith(AndroidJUnit4.class)
+@LargeTest
 public class LoginActivityTest {
+    @Rule
     ActivityTestRule<LoginActivity> activityTestRule =
             new ActivityTestRule<>(LoginActivity.class);
+
 
     @Test
     public void checkUserNameEditTextIsDisplayed() {
@@ -47,16 +54,14 @@ public class LoginActivityTest {
     }
 
     @Test
-    public void checkLoginSuccess()
-    {
+    public void checkLoginSuccess() {
         activityTestRule.launchActivity(new Intent());
-        onView(withId(R.id.edt_user_name)).perform(typeText("nj"),closeSoftKeyboard());
-        onView(withId(R.id.edt_password)).perform(typeText("tdd"),closeSoftKeyboard());
+        onView(withId(R.id.edt_user_name)).perform(typeText("nj"), closeSoftKeyboard());
+        onView(withId(R.id.edt_password)).perform(typeText("tdd"), closeSoftKeyboard());
         onView(withId(R.id.btn_login)).check(matches(isDisplayed())).perform(click());
         onView(withText("Login successful.")).check(matches(isDisplayed()));
 
     }
-
 
 
 }
